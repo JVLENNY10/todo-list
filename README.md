@@ -2,7 +2,7 @@
 
 ## Sobre o projeto
 
-No `Todo List`(Lista de Tarefas) podemos fazer diversas coisas com a lista e seus itens: adicionar, remover, selecionar, mudar de lugar e marcar como "concluído".
+No `Todo List` (Lista de Tarefas) podemos fazer diversas coisas com a lista e seus itens: adicionar, remover, selecionar, mudar de lugar e marcar como "concluído".
 
 Utilizei HTML, CSS e JS para o desenvolvimento deste projeto.
 
