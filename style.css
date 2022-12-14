@@ -1,64 +1,140 @@
-body {
+* {
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('images/agenda.jpg');
 }
 
-main {
-  width: 800px;
-  padding: 20px;
-  margin: 200px auto 0;
-  border-radius: 20px;
-  border: 10px solid black;
-  background-color: rgb(93 , 93 , 93);
+body {
+  background-image: url('images/agenda.jpg');
+  background-size: cover;
 }
 
 header {
-  font-size: 35px;
+  align-items: center;
+  background-color: #23232e;
+  color: #fff;
+  display: flex;
+  height: 10vh;
+  justify-content: center;
+  letter-spacing: 2px;
+}
+
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-around;
+  letter-spacing: 1px;
+}
+
+#container {
+  background-color: #13131c;
+  border: 10px solid #23232e;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 25px;
+  padding: 30px 0;
+  width: 80%;
 }
 
 #funcionamento {
-  font-size: 20px;
   font-style: italic;
+  text-align: center;
+}
+
+#search-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px auto 0;
+  width: 50%;
 }
 
 #texto-tarefa {
-  height: 30px;
-  border-radius: 10px;
-  background-color: gray;
-  border: 5px solid black;
+  background-color: #13131c;
+  border: 5px solid #23232e;
+  border-radius: 15px;
+  color: #fff;
+  font-size: 20px;
+  height: 35px;
+  padding-left: 10px;
+  width: 320px;
+}
+
+#list-container {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 20px auto 0;
+  width: 50%;
+}
+
+#lista-tarefas {
+  background-color: #fff;
+  color: #13131c;
+  border-radius: 5px;
+  padding: 5px 0 25px 40px;
+  width: 300px;
+}
+
+#lista-tarefas li {
+  border-bottom: 1px solid #000;
+  margin-top: 20px;
+  width: 95%;
+}
+
+#lista-tarefas li:hover {
+  cursor: pointer;
 }
 
 #buttons-down {
+  align-items: center;
+  color: #fff;
   display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
-#mover-cima , #mover-baixo {
-  width: 50px;
-  height: 40px;
-  font-size: 25px;
-  margin: 10px 0 0 10px;
-  border-radius: 30px;
-  border: 5px solid rgb(17 , 129 , 129);
-  background-color: rgb(40 , 184 , 184);
+.buttons {
+  color: #13131c;
+  border: 0;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 10px 10px;
+  transition: 0.8s;
+  width: 200px;
 }
 
-#criar-tarefa , #salvar-tarefas {
-  width: 150px;
-  height: 40px;
-  font-size: 14px;
-  margin: 10px 0 0 10px;
-  border-radius: 30px;
-  background-color: green;
-  border: 6px solid darkgreen;
+.buttons:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
-#apaga-tudo , #remover-finalizados , #remover-selecionado {
-  width: 150px;
-  height: 40px;
-  font-size: 14px;
-  margin: 10px 0 0 10px;
-  border-radius: 30px;
-  background-color: red;
-  border: 5px solid darkred;
+#mover-baixo, #salvar-tarefas, #apaga-tudo, #remover-finalizados, #remover-selecionado {
+  margin-top: 20px;
+}
+
+#mover-cima, #mover-baixo {
+  background-color: #237499;
+}
+
+#criar-tarefa, #salvar-tarefas {
+  background-color: #1DB954;
+}
+
+#apaga-tudo, #remover-finalizados, #remover-selecionado {
+  background-color: #b91d1d;
+}
+
+@media (max-width: 1550px) {
+  #search-container, #list-container {
+    flex-direction: column;
+  }
+
+  #criar-tarefa, #mover-cima {
+    margin-top: 20px;
+  }
 }
