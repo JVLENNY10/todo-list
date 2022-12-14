@@ -16,17 +16,13 @@ function selectItem(select) {
   if (select.target.classList.contains('itemList')) {
     const li = document.querySelectorAll('li');
 
-    li.forEach((items) => {
-      const item = items;
-      item.classList.remove('selected');
-      item.style.backgroundColor = 'rgb(93, 93, 93)';
-    });
-
-    li.forEach((items) => {
-      if (select.target === items) {
-        const item = items;
+    li.forEach((item) => {
+      if (item.classList.contains('selected')) {
+        item.style.color = '#13131c';
+        item.classList.remove('selected');
+      } else if (select.target === item) {
         item.classList.add('selected');
-        item.style.backgroundColor = 'rgb(128, 128, 128)';
+        item.style.color = '#1DB954';
       }
     });
   }
@@ -173,37 +169,3 @@ window.onload = function init() {
 
   document.addEventListener('dblclick', completedItem);
 };
-
-// Códigos para implementação futura:
-
-// function moveSelectedUp(select) {
-//   const li = document.querySelectorAll('li');
-//   const moveUp = document.querySelector('#mover-cima');
-
-//   for (let index = 0; index < li.length; index += 1) {
-//     if (select.target === moveUp && li[index].classList.contains('selected')) {
-//       li[index].classList.remove('selected');
-//       li[index].style.backgroundColor = 'rgb(93, 93, 93)';
-//       index -= 1;
-//       if (index < 0) { index = li.length - 1; }
-//       li[index].classList.add('selected');
-//       li[index].style.backgroundColor = 'rgb(128,128,128)';
-//     }
-//   }
-// }
-
-// function moveSelectedDown(select) {
-//   const li = document.querySelectorAll('li');
-//   const moveDown = document.querySelector('#mover-baixo');
-
-//   for (let index = 0; index < li.length; index += 1) {
-//     if (select.target === moveDown && li[index].classList.contains('selected')) {
-//       li[index].classList.remove('selected');
-//       li[index].style.backgroundColor = 'rgb(93, 93, 93)';
-//       index += 1;
-//       if (index > li.length - 1) { index = 0; }
-//       li[index].classList.add('selected');
-//       li[index].style.backgroundColor = 'rgb(128,128,128)';
-//     }
-//   }
-// }
